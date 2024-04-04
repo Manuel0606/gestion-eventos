@@ -1,0 +1,28 @@
+{
+  "name": "gestion-eventos",
+  "version": "1.0.0",
+  "main": "/src/index.ts",
+  "type": "commonjs",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "tsc --build tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.4",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "ts-node-dev": "^2.0.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.4.3"
+  },
+  "description": "",
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}
