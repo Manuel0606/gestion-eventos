@@ -3,5 +3,5 @@ export const db = {
   password: process.env.DB_PASSWORD || '',
   host: process.env.DB_HOST || 'localhost',
   port: parseInt(process.env.PORT || '5432', 10),
-  database: process.env.DB_DATABASE || 'gestion_eventos',
-};
+  database: process.env.DB_DATABASE || 'gestion_eventos'
+}

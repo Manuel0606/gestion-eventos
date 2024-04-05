@@ -1,5 +1,5 @@
 import { Pool } from 'pg'
-import { db } from "./config";
+import { db } from './config'
 import 'dotenv/config'
 
 export const pool = new Pool({
@@ -7,7 +7,7 @@ export const pool = new Pool({
   password: db.password,
   host: db.host,
   port: db.port,
-  database: db.database,
-});
+  database: db.database
+})
 
 pool.on('connect', () => console.log('DB connected'))

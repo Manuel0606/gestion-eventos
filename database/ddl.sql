@@ -3,8 +3,8 @@ CREATE DATABASE gestion_eventos;
 CREATE TABLE location_event (
   location_id SERIAL PRIMARY KEY,
   name_location VARCHAR(255) NOT NULL,
-  latitude DECIMAL(9,6),
-  longitude DECIMAL(9,6),
+  latitude VARCHAR(255),
+  longitude VARCHAR(255),
   address_location VARCHAR(255)
 );
 
