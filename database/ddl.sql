@@ -15,7 +15,6 @@ CREATE TABLE user_info (
   user_password VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE event_info (
   event_id SERIAL PRIMARY KEY,
   title VARCHAR(255) NOT NULL,

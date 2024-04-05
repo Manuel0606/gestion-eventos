@@ -1,6 +1,8 @@
 import fastify from 'fastify'
-import { pool } from './infrastructure/db/db'
+import { pool } from './db/db'
 import 'dotenv/config'
+
+const PORT = parseInt(process.env.PORT || '8080', 10)
 
 const server = fastify({logger: true})
 
@@ -16,7 +18,7 @@ server.get('/ping', async (request, reply) => {
   return 'pong\n'
 })
 
-server.listen({ port: 8080 }, (err, address) => {
+server.listen({ port: PORT }, (err, address) => {
   if (err) {
     console.error(err)
     process.exit(1)
