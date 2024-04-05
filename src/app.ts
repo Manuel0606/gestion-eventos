@@ -1,10 +1,10 @@
 import fastify from "fastify"
-import { pool } from "./db/db"
+import { pool } from "./infraestructure/db/db"
 import "dotenv/config"
 
 const PORT = parseInt(process.env.PORT || '8080', 10);
 
-const server = fastify({ logger: true });
+export const server = fastify({ logger: true });
 
 server.get('/ping', async (request, reply) => {
   try {

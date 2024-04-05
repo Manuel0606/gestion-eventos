@@ -1,17 +1,17 @@
-import { hashSync } from "bcrypt";
-import { UserInfoEntity } from "domain/entities";
+import { hashSync } from 'bcrypt'
+import { UserInfoEntity } from 'domain/entities'
 
 export class UserInfoValue implements UserInfoEntity {
-  username: string;
-  email: string;
-  user_password: string;
+  username: string
+  email: string
+  user_password: string
 
   constructor(userInfo: UserInfoEntity) {
 
-    const hashedPassword = hashSync(userInfo.user_password, 10);
+    const hashedPassword = hashSync(userInfo.user_password, 10)
 
-    this.username = userInfo.username;
-    this.email = userInfo.email;
-    this.user_password = hashedPassword;
+    this.username = userInfo.username
+    this.email = userInfo.email
+    this.user_password = hashedPassword
   }
 }
