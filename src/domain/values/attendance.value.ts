@@ -1,4 +1,4 @@
-import { AttendanceEntity } from 'domain/entities'
+import { AttendanceEntity } from "../entities"
 
 export class AttendanceValue implements AttendanceEntity {
   event_id: number

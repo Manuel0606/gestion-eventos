@@ -1,4 +1,4 @@
-import { EventInfoEntity } from 'domain/entities'
+import { EventInfoEntity } from "../entities"
 
 export interface EventInfoRepository {
   registerEvent(eventInfo: EventInfoEntity): Promise<EventInfoEntity | null>

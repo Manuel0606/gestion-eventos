@@ -1,4 +1,4 @@
-import { EventInfoEntity } from 'domain/entities'
+import { EventInfoEntity } from "../entities"
 
 export class EventInfoValue implements EventInfoEntity {
   title: string

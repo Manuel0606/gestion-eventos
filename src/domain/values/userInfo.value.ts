@@ -1,5 +1,5 @@
 import { hashSync } from 'bcrypt'
-import { UserInfoEntity } from 'domain/entities'
+import { UserInfoEntity } from '../entities'
 
 export class UserInfoValue implements UserInfoEntity {
   username: string

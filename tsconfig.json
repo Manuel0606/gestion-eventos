@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "ESNext",
-    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "ES2016",
+    "moduleResolution": "node",
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "sourceMap": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "moduleResolution": "node",
-    "isolatedModules": true
+    "isolatedModules": true,
   }
 }

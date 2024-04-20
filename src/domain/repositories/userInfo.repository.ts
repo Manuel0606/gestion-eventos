@@ -1,4 +1,4 @@
-import { UserInfoEntity } from 'domain/entities'
+import { UserInfoEntity } from "../entities"
 
 export interface UserInfoRepository {
   registerUser(userInfo: UserInfoEntity): Promise<UserInfoEntity | null>

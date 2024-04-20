@@ -1,4 +1,4 @@
-import { LocationEventEntity } from 'domain/entities'
+import { LocationEventEntity } from "../entities"
 
 export interface LocationEventRepository {
   registerLocationEvent(locationEvent: LocationEventEntity): Promise<LocationEventEntity | null>

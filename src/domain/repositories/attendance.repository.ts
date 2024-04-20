@@ -1,4 +1,4 @@
-import { AttendanceEntity } from 'domain/entities'
+import { AttendanceEntity } from "../entities"
 
 export interface AttendanceRepository {
   registerAttendance(attendance: AttendanceEntity): Promise<AttendanceEntity | null>

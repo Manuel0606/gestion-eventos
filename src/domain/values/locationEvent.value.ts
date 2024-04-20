@@ -1,4 +1,4 @@
-import { LocationEventEntity } from 'domain/entities'
+import { LocationEventEntity } from "../entities"
 
 export class LocationEventValue implements LocationEventEntity {
   name_location: string

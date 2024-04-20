@@ -1,8 +1,8 @@
 
 -- Inserción de datos de ejemplo en la tabla Ubicacion
 INSERT INTO location_event (name_location, latitude, longitude, address_location) VALUES
-('Ubicacion Ejemplo 1', 40.7128, -74.0060, 'New York, NY, USA'),
-('Ubicacion Ejemplo 2', 34.0522, -118.2437, 'Los Angeles, CA, USA');
+('Ubicacion Ejemplo 1', '40.7128', '-74.0060', 'New York, NY, USA'),
+('Ubicacion Ejemplo 2', '34.0522', '-118.2437', 'Los Angeles, CA, USA');
 
 -- Inserción de datos de ejemplo en la tabla Usuario
 INSERT INTO user_info (username, email, user_password) VALUES

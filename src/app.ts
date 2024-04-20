@@ -1,26 +1,14 @@
-import fastify from "fastify"
-import { pool } from "./infraestructure/db/db"
-import "dotenv/config"
+import 'dotenv/config'
+import express from "express";
+import cors from "express";
+import userRoute from "./infraestructure/route/userInfo.route";
 
-const PORT = parseInt(process.env.PORT || '8080', 10);
+const PORT = parseInt(process.env.PORT || '5000')
 
-export const server = fastify({ logger: true });
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-server.get('/ping', async (request, reply) => {
-  try {
-    const result = await pool.query('SELECT NOW()');
-    console.log('respuesta: ' + JSON.stringify(result))
-  } catch (error) {
-    console.log(error)
-  }
+app.use(userRoute);
+app.listen(PORT, () => console.log(`USER, Listo por el puerto ${PORT}`));
 
-  return 'pong\n'
-})
-
-server.listen({ port: PORT }, (err, address) => {
-  if (err != null) {
-    console.error(err)
-    process.exit(1)
-  }
-  console.log(`Server listening at ${address}`)
-});
