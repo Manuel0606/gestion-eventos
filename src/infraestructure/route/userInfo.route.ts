@@ -3,6 +3,7 @@ import { SQLUserInfoRepository } from "../repository";
 import { UserInfoUseCase } from "../../application/useCases";
 import { UserInfoController } from "../controller";
 import { pool } from "../db/db";
+import pruebaMiddleware from "../middlewares/prueba";
 
 const route = Router()
 
@@ -13,6 +14,8 @@ const userInfoUseCase = new UserInfoUseCase(sqlUserInfoRepository)
 const userInfoController = new UserInfoController(userInfoUseCase)
 
 route.post(`/user`, userInfoController.insertUserInfo)
+route.get(`/user/:id`, userInfoController.getUserInfo)
+route.get(`/users`, pruebaMiddleware,userInfoController.listUsers)
 route.get(`/ping`, async (_req, res) => {
   try {
     const result = await pool.query('SELECT NOW()');

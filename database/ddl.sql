@@ -29,3 +29,10 @@ CREATE TABLE attendance (
   user_id INT REFERENCES user_info(user_id),
   attendance_date TIMESTAMP NOT NULL
 );
+
+CREATE TABLE passport_token (
+  token_id SERIAL PRIMARY KEY,
+  token VARCHAR(255) NOT NULL,
+  user_id INT REFERENCES user_info(user_id),
+  expiration_date TIMESTAMP NOT NULL
+);
